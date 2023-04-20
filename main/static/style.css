@@ -1,0 +1,25 @@
+body {
+      background-color:rgb(61, 63, 80);
+      text-align: center;
+    }
+
+h1 {
+    color:mintcream; 
+    font-family:monospace; 
+    text-align:center; 
+    font-size: 100px;
+    font-style:inherit;                              
+    letter-spacing: normal;
+    }
+
+#tags {
+       height: 200%;
+       font-size: 14pt;
+       text-align: center;
+       :focus {border: 20px solid #555}
+    }
+
+input:hover, select:hover {
+        border-color: transparent;
+        box-shadow: 0 0 0 5px orange;
+      }
