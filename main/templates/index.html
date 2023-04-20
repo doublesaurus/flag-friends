@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+
+{% load static %}
+
+<html> 
+    <head>   
+        <title>What The Flag</title>
+        
+        <link rel="icon" 
+              type="image/x-icon" 
+              href="{% static 'favicon.ico' %}"
+              >
+
+        <script src=   "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"> 
+        </script>   
+
+        <script src=   "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js">   
+        </script>   
+
+        <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css"
+              rel="stylesheet" 
+              type="text/css" 
+              />
+
+        <link rel="stylesheet" href= "{% static 'style.css' %}">
+              
+    </head> 
+
+<body> 
+    <h1>
+         <img src="{% static 'WTFlogov2.png' %}" alt="What the Flag logo" width="250"> 
+    </h1>
+
+    <input type="text" id="tags" placeholder="Enter Country"> 
+
+    <script> 
+        $( function() { 
+
+                        var availableTags = [ 
+
+                            {% for country in countries %} 
+
+                            "{{country.name}}", 
+
+                            {% endfor %} 
+
+                        ]; 
+
+                        $( "#tags" ).autocomplete({ 
+
+                        source: availableTags 
+
+                        }); 
+
+                    } ); 
+
+    </script> 
+
+</body> 
+
+</html>
