@@ -28,10 +28,12 @@
 
 <body> 
     <h1>
-         <img src="{% static 'WTFlogov2.png' %}" alt="What the Flag logo" width="250"> 
+         <img src="{% static 'WTFlogov2.png' %}" alt="What the Flag logo" width="250">
     </h1>
 
-    <input type="text" id="tags" placeholder="Enter Country"> 
+    <img style="height: 250px;" src="https://flagsapi.com/{{ country_code }}/shiny/64.png">
+
+    <input type="text" id="tags" placeholder="Enter Country..."> 
 
     <script> 
         $( function() { 
