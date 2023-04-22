@@ -16,10 +16,9 @@ h1 {
        height: 200%;
        font-size: 14pt;
        text-align: center;
-       :focus {border: 20px solid #555}
     }
 
 input:hover, select:hover {
         border-color: transparent;
-        box-shadow: 0 0 0 5px orange;
+        box-shadow: 0 0 0 5px rgb(255, 0, 0);
       }
