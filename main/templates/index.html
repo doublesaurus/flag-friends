@@ -31,7 +31,12 @@
          <img src="{% static 'WTFlogov2.png' %}" alt="What the Flag logo" width="250">
     </h1>
 
-    <img style="height: 250px;" src="https://flagsapi.com/{{ country_code }}/shiny/64.png">
+    <!-- <img style="height: 250px;" src="https://flagsapi.com/{{ country_code }}/shiny/64.png"> -->
+<div>
+    <img id="flag" src="https://flagcdn.com/w640/{{ country_code }}.png" 
+    alt="Flag of today's country to guess" 
+    title="You won't find the answer by hovering over the flag lol">
+</div>
 
     <input type="text" id="tags" placeholder="Enter Country..."> 
 
@@ -58,7 +63,10 @@
 
     </script> 
 
-    <p>This is my awesome flag guessing game.</p>
+    
+
+    
+
 
 </body> 
 
