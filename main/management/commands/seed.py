@@ -1,5 +1,7 @@
 from django.core.management.base import BaseCommand
 from main.models import Country
+import os.path
+import json
 import requests
 import logging
 
@@ -36,7 +38,9 @@ def seed_countries():
     """Fetches country data and parses it out to seed the database"""
     logger.info("Fetching country data")
 
-    response = requests.get(f"{REST_COUNTRIES_API}/all")
+    # response = requests.get(f"{REST_COUNTRIES_API}/all")
+    f = open(os.path.dirname(__file__) + "/../../../countries.json", "r")
+    data = json.loads(f.read())
 
     print(response.json())
 
